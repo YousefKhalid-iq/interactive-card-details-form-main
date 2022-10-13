@@ -6,21 +6,7 @@
   box-sizing: border-box;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 360px;
-}
-
-.exp__date__cvc__cont {
-  display: flex;
-}
-
-.exp__date__cont {
-  display: flex;
-}
-
-.jj {
+.date__output__cont {
   display: flex;
 }
 

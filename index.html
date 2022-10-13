@@ -11,55 +11,58 @@
   <div class="main__cont">
     <div class="display__cont">
       <div class="backcard__img__cont">
-        <img src="" alt="">
-        <p>000</p>
+        <img src="images/bg-card-back.png" alt="an image of the backside of a credit card">
+        <p class="main__cvc">000</p>
       </div>
       <div class="frontcard__img_cont">
-        <img src="" alt="">
+        <img src="images/bg-card-front.png" alt="an image of the frontside of a credit card">
         <div class="circles__img__cont">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="images/card-logo-big.svg" alt="">
+          <img src="images/card-logo-small.svg" alt="">
         </div>
         <div class="frontcard__content">
           <p class="main__number">0000 0000 0000 0000</p>
-          <p class="main__name">Jane Appleseed</p>
-          <p class="main__date">00/00</p>
+          <p class="main__name" >Jane Appleseed</p>
+          <div class="date__output__cont">
+            <p class="main__date__firsthalf">00</p>
+            <p class="main__date__/">/</p>
+            <p class="main__date__secondhalf">00</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="form__cont">
       <form action="">
         <label for="">Cardholder Name</label>
-        <input type="text" placeholder="e.g. Jane Appleseed">
+        <input type="text" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)">
         <label for="">Card Number</label>
-        <input type="text" placeholder="e.g. 1234 5678 9123 0000">
-        <div class="jj">
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)">
+        <div class="date__cvc__text__cont">
           <p>Exp. Date (MM/YY)</p>
           <p>CVC</p>
         </div>
-        
         <div class="exp__date__cvc__cont">
           <div class="exp__date__cont">
-            <input type="text" placeholder="MM">
-            <input type="text" placeholder="YY">
+            <input type="text" placeholder="MM" onkeyup="mainDateFunc1(this)">
+            <input type="text" placeholder="YY" onkeyup="mainDateFunc2(this)">
           </div>
-          <input type="text" placeholder="e.g. 123">
+          <input type="text" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)">
         </div>
         <button>Confirm</button>
       </form>
     </div>
   </div>
-
   <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
+  <div>
+    <h2>Thank you!</h2>
+    <p>We've added your card details</p>
+    <button>Continue</button>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Yousef Khalid</a>.
   </div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js">
+  </script>
 </body>
 </html>
