@@ -104,12 +104,17 @@ form label, .date__label, .cvc__label {
   padding: 15px 0 5px 0;
 }
 
+.cvc__label {
+  margin-left: 20px;
+}
+
 form input {
   border: 2px solid hsl(270deg, 3%, 87%);
   width: 330px;
   padding: 10px 14px;
   border-radius: 0.3rem;
   font-size: 1.1rem;
+  color: hsl(278deg, 68%, 11%);
 }
 
 form input:focus {
@@ -125,12 +130,12 @@ form input:focus {
   margin-bottom: 30px;
 }
 
-.month__input, .year__input {
+#month__input, #year__input {
   width: 75px;
   margin-right: 5px;
 }
 
-.cvc__input {
+#cvc__input {
   width: 170px;
 }
 

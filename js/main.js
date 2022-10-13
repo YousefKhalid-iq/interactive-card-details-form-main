@@ -51,3 +51,20 @@ function mainCvcFunc(element) {
 }
 
 // End of functions for replacing text in the default container from form input
+
+// Making a space after every 4 numbers in the ""card number input""
+
+document.getElementById('num__input').addEventListener('input', function (e) {
+  e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+});
+
+// End of making a space after every 4 numbers in the ""card number input""
+
+// Making the ""name input"" only accept letters 
+
+function alphaOnly(event) {
+  let key = event.keyCode;
+  return ((key >= 65 && key <= 90) || key == 8);
+};
+
+// end of making the ""name input"" only accept letters 

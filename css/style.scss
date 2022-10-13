@@ -116,12 +116,17 @@ form label, .date__label, .cvc__label {
   padding: 15px 0 5px 0;
 }
 
+.cvc__label {
+  margin-left: 20px;
+}
+
 form input {
   border: 2px solid $light_grayish_violet;
   width: 330px;
   padding: 10px 14px;
   border-radius: 0.3rem;
   font-size: 1.1rem;
+  color: $very_dark_violet;
 }
 
 form input:focus {
@@ -137,12 +142,12 @@ form input:focus {
   margin-bottom: 30px;
 }
 
-.month__input, .year__input {
+#month__input, #year__input {
   width: 75px;
   margin-right: 5px;
 }
 
-.cvc__input {
+#cvc__input {
   width: 170px;
 }
 
