@@ -15,7 +15,11 @@ body {
   background-repeat: no-repeat;
   z-index: -1;
   background-size: 100%;
-  height: 50%;
+}
+
+.display__cont__nobg {
+  width: 375px;
+  margin: 0 auto;
 }
 
 .backcard__img__cont, .frontcard__img__cont {
@@ -34,22 +38,25 @@ body {
 
 .backcard__img {
   left: 80px;
-  top: 25px;
+  top: 35px;
 }
 
 .frontcard__img {
-  top: 112px;
+  top: 122px;
   left: 15px;
 }
 
 .main__cvc {
   position: absolute;
-  top: 89px;
+  top: 103px;
   right: -45px;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
 }
 
 .circles__img {
-  margin-top: 130px;
+  margin-top: 140px;
   width: 22%;
   margin-left: 35px;
 }
@@ -62,17 +69,110 @@ body {
 
 .date__name__output__cont {
   display: flex;
+  margin-top: 10px;
 }
 
 .main__number {
   font-size: 1.15rem;
-  color: hsl(270deg, 3%, 87%);
+  color: hsl(0deg, 0%, 100%);
   width: 100%;
   letter-spacing: 0.1rem;
 }
 
+.main__name, .main__date__firsthalf, .main__date__slash, .main__date__secondhalf {
+  font-size: 0.7rem;
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+}
+
+.main__name {
+  width: 205px;
+}
+
 form {
-  margin-top: 100px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+}
+
+form label, .date__label, .cvc__label {
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 15px 0 5px 0;
+}
+
+form input {
+  border: 2px solid hsl(270deg, 3%, 87%);
+  width: 330px;
+  padding: 10px 14px;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+}
+
+form input:focus {
+  outline: hsl(278deg, 68%, 11%);
+  border: 2px solid hsl(278deg, 68%, 11%);
+}
+
+.date__cvc__text__cont, .exp__date__cvc__cont {
+  display: flex;
+}
+
+.exp__date__cvc__cont {
+  margin-bottom: 30px;
+}
+
+.month__input, .year__input {
+  width: 75px;
+  margin-right: 5px;
+}
+
+.cvc__input {
+  width: 170px;
+}
+
+input::-moz-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+  font-size: 1.1rem;
+}
+
+input:-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+  font-size: 1.1rem;
+}
+
+input::placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+  font-size: 1.1rem;
+}
+
+:-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+}
+
+.confirm__btn {
+  padding: 12px 0;
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  font-size: 1rem;
+  border: 0;
+  border-radius: 0.3rem;
+}
+
+.btn__active__cont {
+  visibility: hidden;
 }
 
 .attribution {

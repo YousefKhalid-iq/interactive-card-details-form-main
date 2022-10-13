@@ -10,22 +10,24 @@
 <body>
   <div class="main__cont">
     <div class="display__cont">
-      <div class="backcard__img__cont">
-        <img src="images/bg-card-back.png" class="backcard__img" alt="an image of the backside of a credit card">
-        <p class="main__cvc">000</p>
-      </div>
-      <div class="frontcard__img__cont">
-        <img src="images/bg-card-front.png" class="frontcard__img" alt="an image of the frontside of a credit card">
-        <div class="circles__img__cont">
-          <img src="images/card-logo.svg" class="circles__img" alt="" role="presentation">
+      <div class="display__cont__nobg">
+        <div class="backcard__img__cont">
+          <img src="images/bg-card-back.png" class="backcard__img" alt="an image of the backside of a credit card">
+          <p class="main__cvc">000</p>
         </div>
-        <div class="frontcard__content">
-          <p class="main__number">0000 0000 0000 0000</p>
-          <div class="date__name__output__cont">
-            <p class="main__name" >Jane Appleseed</p>
-            <p class="main__date__firsthalf">00</p>
-            <p class="main__date__/">/</p>
-            <p class="main__date__secondhalf">00</p>
+        <div class="frontcard__img__cont">
+          <img src="images/bg-card-front.png" class="frontcard__img" alt="an image of the frontside of a credit card">
+          <div class="circles__img__cont">
+            <img src="images/card-logo.svg" class="circles__img" alt="" role="presentation">
+          </div>
+          <div class="frontcard__content">
+            <p class="main__number">0000 0000 0000 0000</p>
+            <div class="date__name__output__cont">
+              <p class="main__name" >Jane Appleseed</p>
+              <p class="main__date__firsthalf">00</p>
+              <p class="main__date__slash">/</p>
+              <p class="main__date__secondhalf">00</p>
+            </div>
           </div>
         </div>
       </div>
@@ -33,26 +35,24 @@
     <div class="form__cont">
       <form action="">
         <label for="">Cardholder Name</label>
-        <input type="text" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)">
+        <input type="text" class="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)">
         <label for="">Card Number</label>
-        <input type="text" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)">
+        <input type="text" class="num__input" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)">
         <div class="date__cvc__text__cont">
-          <p>Exp. Date (MM/YY)</p>
-          <p>CVC</p>
+          <p class="date__label">Exp. Date (MM/YY)</p>
+          <p class="cvc__label">CVC</p>
         </div>
         <div class="exp__date__cvc__cont">
-          <div class="exp__date__cont">
-            <input type="text" placeholder="MM" onkeyup="mainDateFunc1(this)">
-            <input type="text" placeholder="YY" onkeyup="mainDateFunc2(this)">
-          </div>
-          <input type="text" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)">
+          <input type="text" class="month__input" placeholder="MM" onkeyup="mainDateFunc1(this)">
+          <input type="text" class="year__input" placeholder="YY" onkeyup="mainDateFunc2(this)">
+          <input type="text" class="cvc__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)">  
         </div>
-        <button>Confirm</button>
+        <button class="confirm__btn">Confirm</button>
       </form>
     </div>
   </div>
   <!-- Completed state start -->
-  <div>
+  <div class="btn__active__cont">
     <h2>Thank you!</h2>
     <p>We've added your card details</p>
     <button>Continue</button>
