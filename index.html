@@ -35,7 +35,7 @@
     <div class="form__cont">
       <form action="">
         <label for="name__input">Cardholder Name</label>
-        <input type="text" maxlength="25" id="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)" required>
+        <input type="text" maxlength="25" id="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)" onkeydown="return /[a-z]/i.test(event.key)" onpaste="return false;" ondrop="return false;" required>
         <label for="num__input">Card Number</label>
         <input type="text" maxlength="19" id="num__input" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)" name="num__input" required>
         <div class="date__cvc__text__cont">
@@ -43,9 +43,9 @@
           <p class="cvc__label">CVC</p>
         </div>
         <div class="exp__date__cvc__cont">
-          <input type="number" id="month__input" placeholder="MM" onkeyup="mainDateFunc1(this)" required>
-          <input type="number" id="year__input" placeholder="YY" onkeyup="mainDateFunc2(this)" required>
-          <input type="number" id="cvc__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)" required>  
+          <input type="text" id="month__input" class="exp__date__cvc__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2" required>
+          <input type="text" id="year__input" class="exp__date__cvc__input" placeholder="YY" onkeyup="mainDateFunc2(this)" maxlength="2" required>
+          <input type="text" id="cvc__input" class="exp__date__cvc__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)" maxlength="3" required>  
         </div>
         <button class="confirm__btn">Confirm</button>
       </form>

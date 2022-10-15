@@ -68,3 +68,13 @@ function alphaOnly(event) {
 };
 
 // end of making the ""name input"" only accept letters 
+
+// Making month, year and cvc number only inputs 
+
+document.querySelectorAll("input.exp__date__cvc__input").forEach(el => {
+    el.addEventListener('input', function (e) {
+    e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').trim();
+  })
+});
+
+// End of making month, year and cvc number only inputs
