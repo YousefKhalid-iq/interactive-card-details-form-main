@@ -16,19 +16,16 @@ body {
   z-index: -1;
   background-size: 100%;
 }
-
-.display__cont__nobg {
+.display__cont .display__cont__nobg {
   width: 375px;
   margin: 0 auto;
 }
-
-.backcard__img__cont, .frontcard__img__cont {
+.display__cont .display__cont__nobg .backcard__img__cont, .display__cont .display__cont__nobg .frontcard__img__cont {
   position: relative;
   z-index: 1;
   width: 280px;
 }
-
-.backcard__img, .frontcard__img {
+.display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
   width: 280px;
   display: block;
   margin: 0 auto;
