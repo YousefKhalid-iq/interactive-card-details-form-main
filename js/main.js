@@ -78,3 +78,10 @@ document.querySelectorAll("input.exp__date__cvc__input").forEach(el => {
 });
 
 // End of making month, year and cvc number only inputs
+
+let form = document.querySelector('.main__form');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+});
+

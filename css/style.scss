@@ -37,6 +37,16 @@ body {
       z-index: 1;
       width: 280px;
 
+      .backcard__img {
+        left: 80px;
+        top: 35px;
+      }
+      
+      .frontcard__img {
+        top: 122px;
+        left: 15px;
+      }
+
       .backcard__img, .frontcard__img {
         width: 280px;
         display: block;
@@ -44,61 +54,51 @@ body {
         position: absolute;
         z-index: -1;
       }
+
+      .main__cvc {
+        position: absolute;
+        top: 103px;
+        right: -45px;
+        color: $white;
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+      }
+
+      .circles__img {
+        margin-top: 140px;
+        width: 22%;
+        margin-left: 35px;
+      }
+
+      .frontcard__content {
+        margin-top: 30px;
+        margin-left: 35px;
+        width: 100%;
+
+        .date__name__output__cont {
+          display: flex;
+          margin-top: 10px;
+        }
+
+        .main__number {
+          font-size: 1.15rem;
+          color: $white;
+          width: 100%;
+          letter-spacing: 0.1rem;
+        }
+
+        .main__name {
+          width: 205px;
+        }
+
+        .main__name, .main__date__firsthalf, .main__date__slash, .main__date__secondhalf {
+          font-size: 0.7rem;
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
     }
-  }
-}
-
-.backcard__img {
-  left: 80px;
-  top: 35px;
-}
-
-.frontcard__img {
-  top: 122px;
-  left: 15px;
-}
-
-.main__cvc {
-  position: absolute;
-  top: 103px;
-  right: -45px;
-  color: $white;
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-}
-
-.circles__img {
-  margin-top: 140px;
-  width: 22%;
-  margin-left: 35px;
-}
-
-.frontcard__content {
-  margin-top: 30px;
-  margin-left: 35px;
-  width: 100%;
-}
-
-.date__name__output__cont {
-  display: flex;
-  margin-top: 10px;
-}
-
-.main__number {
-  font-size: 1.15rem;
-  color: $white;
-  width: 100%;
-  letter-spacing: 0.1rem;
-}
-
-.main__name, .main__date__firsthalf, .main__date__slash, .main__date__secondhalf {
-  font-size: 0.7rem;
-  color: $white;
-  text-transform: uppercase;
-}
-
-.main__name {
-  width: 205px;
+  } 
 }
 
 form {
@@ -106,78 +106,81 @@ form {
   display: flex;
   flex-direction: column;
   width: 330px;
-}
 
-form label, .date__label, .cvc__label {
-  text-transform: uppercase;
-  color: $very_dark_violet;
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
-  padding: 15px 0 5px 0;
-}
+  
+  
+  
+  form input {
+    border: 2px solid $light_grayish_violet;
+    width: 330px;
+    padding: 10px 14px;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    color: $very_dark_violet;
+  }
+  
+  form input:focus {
+    outline: $very_dark_violet;
+    border: 2px solid $very_dark_violet;
+  }
+  
+  .date__cvc__text__cont, .exp__date__cvc__cont {
+    display: flex;
 
-.cvc__label {
-  margin-left: 20px;
-}
+    form label, .date__label, .cvc__label {
+      text-transform: uppercase;
+      color: $very_dark_violet;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+      padding: 15px 0 5px 0;
+    }
 
-form input {
-  border: 2px solid $light_grayish_violet;
-  width: 330px;
-  padding: 10px 14px;
-  border-radius: 0.3rem;
-  font-size: 1.1rem;
-  color: $very_dark_violet;
-}
+    .cvc__label {
+      margin-left: 20px;
+    }
+  }
+  
+  .exp__date__cvc__cont {
+    margin-bottom: 30px;
 
-form input:focus {
-  outline: $very_dark_violet;
-  border: 2px solid $very_dark_violet;
-}
+    #month__input, #year__input {
+      width: 75px;
+      margin-right: 5px;
+    }
+    
+    #cvc__input {
+      width: 170px;
+    }
+    
+    input::placeholder {
+      color: $dark_grayish_violet;
+      opacity: 0.5;
+      font-size: 1.1rem;
+    }
+    
+    :-ms-input-placeholder {
+      color: $dark_grayish_violet;
+      opacity: 0.5;
+    }
+    
+    ::-ms-input-placeholder {
+      color: $dark_grayish_violet;
+      opacity: 0.5;
+    }
+  }
 
-.date__cvc__text__cont, .exp__date__cvc__cont {
-  display: flex;
-}
+  .confirm__btn {
+    padding: 12px 0;
+    background-color: $very_dark_violet;
+    color: $light_grayish_violet;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 0.3rem;
+  }
 
-.exp__date__cvc__cont {
-  margin-bottom: 30px;
-}
-
-#month__input, #year__input {
-  width: 75px;
-  margin-right: 5px;
-}
-
-#cvc__input {
-  width: 170px;
-}
-
-input::placeholder {
-  color: $dark_grayish_violet;
-  opacity: 0.5;
-  font-size: 1.1rem;
-}
-
-:-ms-input-placeholder {
-  color: $dark_grayish_violet;
-  opacity: 0.5;
-}
-
-::-ms-input-placeholder {
-  color: $dark_grayish_violet;
-  opacity: 0.5;
-}
-
-.confirm__btn {
-  padding: 12px 0;
-  background-color: $very_dark_violet;
-  color: $light_grayish_violet;
-  font-size: 1rem;
-  border: 0;
-  border-radius: 0.3rem;
-}
-
-.btn__active__cont {
-  visibility: hidden;
+  .btn__active__cont {
+    visibility: hidden;
+  }
 }
 
 .attribution { 

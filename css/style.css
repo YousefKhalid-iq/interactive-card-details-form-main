@@ -25,6 +25,14 @@ body {
   z-index: 1;
   width: 280px;
 }
+.display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img {
+  left: 80px;
+  top: 35px;
+}
+.display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
+  top: 122px;
+  left: 15px;
+}
 .display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
   width: 280px;
   display: block;
@@ -32,18 +40,7 @@ body {
   position: absolute;
   z-index: -1;
 }
-
-.backcard__img {
-  left: 80px;
-  top: 35px;
-}
-
-.frontcard__img {
-  top: 122px;
-  left: 15px;
-}
-
-.main__cvc {
+.display__cont .display__cont__nobg .backcard__img__cont .main__cvc, .display__cont .display__cont__nobg .frontcard__img__cont .main__cvc {
   position: absolute;
   top: 103px;
   right: -45px;
@@ -51,39 +48,33 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
 }
-
-.circles__img {
+.display__cont .display__cont__nobg .backcard__img__cont .circles__img, .display__cont .display__cont__nobg .frontcard__img__cont .circles__img {
   margin-top: 140px;
   width: 22%;
   margin-left: 35px;
 }
-
-.frontcard__content {
+.display__cont .display__cont__nobg .backcard__img__cont .frontcard__content, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content {
   margin-top: 30px;
   margin-left: 35px;
   width: 100%;
 }
-
-.date__name__output__cont {
+.display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .date__name__output__cont, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .date__name__output__cont {
   display: flex;
   margin-top: 10px;
 }
-
-.main__number {
+.display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__number, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__number {
   font-size: 1.15rem;
   color: hsl(0deg, 0%, 100%);
   width: 100%;
   letter-spacing: 0.1rem;
 }
-
-.main__name, .main__date__firsthalf, .main__date__slash, .main__date__secondhalf {
+.display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__name, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__name {
+  width: 205px;
+}
+.display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__name, .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__date__firsthalf, .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__date__slash, .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__date__secondhalf, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__name, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__date__firsthalf, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__date__slash, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__date__secondhalf {
   font-size: 0.7rem;
   color: hsl(0deg, 0%, 100%);
   text-transform: uppercase;
-}
-
-.main__name {
-  width: 205px;
 }
 
 form {
@@ -92,20 +83,7 @@ form {
   flex-direction: column;
   width: 330px;
 }
-
-form label, .date__label, .cvc__label {
-  text-transform: uppercase;
-  color: hsl(278deg, 68%, 11%);
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
-  padding: 15px 0 5px 0;
-}
-
-.cvc__label {
-  margin-left: 20px;
-}
-
-form input {
+form form input {
   border: 2px solid hsl(270deg, 3%, 87%);
   width: 330px;
   padding: 10px 14px;
@@ -113,58 +91,57 @@ form input {
   font-size: 1.1rem;
   color: hsl(278deg, 68%, 11%);
 }
-
-form input:focus {
+form form input:focus {
   outline: hsl(278deg, 68%, 11%);
   border: 2px solid hsl(278deg, 68%, 11%);
 }
-
-.date__cvc__text__cont, .exp__date__cvc__cont {
+form .date__cvc__text__cont, form .exp__date__cvc__cont {
   display: flex;
 }
-
-.exp__date__cvc__cont {
+form .date__cvc__text__cont form label, form .date__cvc__text__cont .date__label, form .date__cvc__text__cont .cvc__label, form .exp__date__cvc__cont form label, form .exp__date__cvc__cont .date__label, form .exp__date__cvc__cont .cvc__label {
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 15px 0 5px 0;
+}
+form .date__cvc__text__cont .cvc__label, form .exp__date__cvc__cont .cvc__label {
+  margin-left: 20px;
+}
+form .exp__date__cvc__cont {
   margin-bottom: 30px;
 }
-
-#month__input, #year__input {
+form .exp__date__cvc__cont #month__input, form .exp__date__cvc__cont #year__input {
   width: 75px;
   margin-right: 5px;
 }
-
-#cvc__input {
+form .exp__date__cvc__cont #cvc__input {
   width: 170px;
 }
-
-input::-moz-placeholder {
+form .exp__date__cvc__cont input::-moz-placeholder {
   color: hsl(279deg, 6%, 55%);
   opacity: 0.5;
   font-size: 1.1rem;
 }
-
-input:-ms-input-placeholder {
+form .exp__date__cvc__cont input:-ms-input-placeholder {
   color: hsl(279deg, 6%, 55%);
   opacity: 0.5;
   font-size: 1.1rem;
 }
-
-input::placeholder {
+form .exp__date__cvc__cont input::placeholder {
   color: hsl(279deg, 6%, 55%);
   opacity: 0.5;
   font-size: 1.1rem;
 }
-
-:-ms-input-placeholder {
+form .exp__date__cvc__cont :-ms-input-placeholder {
   color: hsl(279deg, 6%, 55%);
   opacity: 0.5;
 }
-
-::-ms-input-placeholder {
+form .exp__date__cvc__cont ::-ms-input-placeholder {
   color: hsl(279deg, 6%, 55%);
   opacity: 0.5;
 }
-
-.confirm__btn {
+form .confirm__btn {
   padding: 12px 0;
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(270deg, 3%, 87%);
@@ -172,8 +149,7 @@ input::placeholder {
   border: 0;
   border-radius: 0.3rem;
 }
-
-.btn__active__cont {
+form .btn__active__cont {
   visibility: hidden;
 }
 
