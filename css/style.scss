@@ -101,15 +101,58 @@ body {
   } 
 }
 
-form {
-  margin: 60px auto 0 auto;
-  display: flex;
-  flex-direction: column;
-  width: 330px;
+.form__cont {
+  form {
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
 
+    form input:focus {
+      outline: $very_dark_violet;
+      border: 2px solid $very_dark_violet;
+    }
+    
+    .date__cvc__text__cont, .exp__date__cvc__cont {
+      display: flex;
   
+      form label, .date__label, .cvc__label {
+        text-transform: uppercase;
+        color: $very_dark_violet;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        padding: 15px 0 5px 0;
+      }
   
+      .cvc__label {
+        margin-left: 20px;
+      }
+    }
+    .exp__date__cvc__cont {
+      margin-bottom: 30px;
   
+      #month__input, #year__input {
+        width: 75px;
+        margin-right: 5px;
+      }
+      
+      #cvc__input {
+        width: 170px;
+      }
+    }
+    .confirm__btn {
+      padding: 12px 0;
+      background-color: $very_dark_violet;
+      color: $light_grayish_violet;
+      font-size: 1rem;
+      border: 0;
+      border-radius: 0.3rem;
+    }
+  
+    .btn__active__cont {
+      visibility: hidden;
+    }
+  }
   form input {
     border: 2px solid $light_grayish_violet;
     width: 330px;
@@ -118,70 +161,24 @@ form {
     font-size: 1.1rem;
     color: $very_dark_violet;
   }
-  
-  form input:focus {
-    outline: $very_dark_violet;
-    border: 2px solid $very_dark_violet;
+
+  input::placeholder {
+    color: $dark_grayish_violet;
+    opacity: 0.5;
+    font-size: 1.1rem;
   }
   
-  .date__cvc__text__cont, .exp__date__cvc__cont {
-    display: flex;
-
-    form label, .date__label, .cvc__label {
-      text-transform: uppercase;
-      color: $very_dark_violet;
-      font-size: 0.8rem;
-      letter-spacing: 0.1rem;
-      padding: 15px 0 5px 0;
-    }
-
-    .cvc__label {
-      margin-left: 20px;
-    }
+  :-ms-input-placeholder {
+    color: $dark_grayish_violet;
+    opacity: 0.5;
   }
   
-  .exp__date__cvc__cont {
-    margin-bottom: 30px;
-
-    #month__input, #year__input {
-      width: 75px;
-      margin-right: 5px;
-    }
-    
-    #cvc__input {
-      width: 170px;
-    }
-    
-    input::placeholder {
-      color: $dark_grayish_violet;
-      opacity: 0.5;
-      font-size: 1.1rem;
-    }
-    
-    :-ms-input-placeholder {
-      color: $dark_grayish_violet;
-      opacity: 0.5;
-    }
-    
-    ::-ms-input-placeholder {
-      color: $dark_grayish_violet;
-      opacity: 0.5;
-    }
-  }
-
-  .confirm__btn {
-    padding: 12px 0;
-    background-color: $very_dark_violet;
-    color: $light_grayish_violet;
-    font-size: 1rem;
-    border: 0;
-    border-radius: 0.3rem;
-  }
-
-  .btn__active__cont {
-    visibility: hidden;
+  ::-ms-input-placeholder {
+    color: $dark_grayish_violet;
+    opacity: 0.5;
   }
 }
+
 
 .attribution { 
   font-size: 11px; text-align: center; 

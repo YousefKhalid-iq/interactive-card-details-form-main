@@ -77,71 +77,40 @@ body {
   text-transform: uppercase;
 }
 
-form {
+.form__cont form {
   margin: 60px auto 0 auto;
   display: flex;
   flex-direction: column;
   width: 330px;
 }
-form form input {
-  border: 2px solid hsl(270deg, 3%, 87%);
-  width: 330px;
-  padding: 10px 14px;
-  border-radius: 0.3rem;
-  font-size: 1.1rem;
-  color: hsl(278deg, 68%, 11%);
-}
-form form input:focus {
+.form__cont form form input:focus {
   outline: hsl(278deg, 68%, 11%);
   border: 2px solid hsl(278deg, 68%, 11%);
 }
-form .date__cvc__text__cont, form .exp__date__cvc__cont {
+.form__cont form .date__cvc__text__cont, .form__cont form .exp__date__cvc__cont {
   display: flex;
 }
-form .date__cvc__text__cont form label, form .date__cvc__text__cont .date__label, form .date__cvc__text__cont .cvc__label, form .exp__date__cvc__cont form label, form .exp__date__cvc__cont .date__label, form .exp__date__cvc__cont .cvc__label {
+.form__cont form .date__cvc__text__cont form label, .form__cont form .date__cvc__text__cont .date__label, .form__cont form .date__cvc__text__cont .cvc__label, .form__cont form .exp__date__cvc__cont form label, .form__cont form .exp__date__cvc__cont .date__label, .form__cont form .exp__date__cvc__cont .cvc__label {
   text-transform: uppercase;
   color: hsl(278deg, 68%, 11%);
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   padding: 15px 0 5px 0;
 }
-form .date__cvc__text__cont .cvc__label, form .exp__date__cvc__cont .cvc__label {
+.form__cont form .date__cvc__text__cont .cvc__label, .form__cont form .exp__date__cvc__cont .cvc__label {
   margin-left: 20px;
 }
-form .exp__date__cvc__cont {
+.form__cont form .exp__date__cvc__cont {
   margin-bottom: 30px;
 }
-form .exp__date__cvc__cont #month__input, form .exp__date__cvc__cont #year__input {
+.form__cont form .exp__date__cvc__cont #month__input, .form__cont form .exp__date__cvc__cont #year__input {
   width: 75px;
   margin-right: 5px;
 }
-form .exp__date__cvc__cont #cvc__input {
+.form__cont form .exp__date__cvc__cont #cvc__input {
   width: 170px;
 }
-form .exp__date__cvc__cont input::-moz-placeholder {
-  color: hsl(279deg, 6%, 55%);
-  opacity: 0.5;
-  font-size: 1.1rem;
-}
-form .exp__date__cvc__cont input:-ms-input-placeholder {
-  color: hsl(279deg, 6%, 55%);
-  opacity: 0.5;
-  font-size: 1.1rem;
-}
-form .exp__date__cvc__cont input::placeholder {
-  color: hsl(279deg, 6%, 55%);
-  opacity: 0.5;
-  font-size: 1.1rem;
-}
-form .exp__date__cvc__cont :-ms-input-placeholder {
-  color: hsl(279deg, 6%, 55%);
-  opacity: 0.5;
-}
-form .exp__date__cvc__cont ::-ms-input-placeholder {
-  color: hsl(279deg, 6%, 55%);
-  opacity: 0.5;
-}
-form .confirm__btn {
+.form__cont form .confirm__btn {
   padding: 12px 0;
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(270deg, 3%, 87%);
@@ -149,8 +118,39 @@ form .confirm__btn {
   border: 0;
   border-radius: 0.3rem;
 }
-form .btn__active__cont {
+.form__cont form .btn__active__cont {
   visibility: hidden;
+}
+.form__cont form input {
+  border: 2px solid hsl(270deg, 3%, 87%);
+  width: 330px;
+  padding: 10px 14px;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  color: hsl(278deg, 68%, 11%);
+}
+.form__cont input::-moz-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+  font-size: 1.1rem;
+}
+.form__cont input:-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+  font-size: 1.1rem;
+}
+.form__cont input::placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+  font-size: 1.1rem;
+}
+.form__cont :-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
+}
+.form__cont ::-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 0.5;
 }
 
 .attribution {
