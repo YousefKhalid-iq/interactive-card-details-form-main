@@ -84,4 +84,3 @@ let form = document.querySelector('.main__form');
 form.addEventListener('submit', e => {
   e.preventDefault();
 });
-

@@ -90,13 +90,6 @@ body {
 .form__cont form .date__cvc__text__cont, .form__cont form .exp__date__cvc__cont {
   display: flex;
 }
-.form__cont form .date__cvc__text__cont form label, .form__cont form .date__cvc__text__cont .date__label, .form__cont form .date__cvc__text__cont .cvc__label, .form__cont form .exp__date__cvc__cont form label, .form__cont form .exp__date__cvc__cont .date__label, .form__cont form .exp__date__cvc__cont .cvc__label {
-  text-transform: uppercase;
-  color: hsl(278deg, 68%, 11%);
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
-  padding: 15px 0 5px 0;
-}
 .form__cont form .date__cvc__text__cont .cvc__label, .form__cont form .exp__date__cvc__cont .cvc__label {
   margin-left: 20px;
 }
@@ -151,6 +144,26 @@ body {
 .form__cont ::-ms-input-placeholder {
   color: hsl(279deg, 6%, 55%);
   opacity: 0.5;
+}
+.form__cont form label, .form__cont .date__label, .form__cont .cvc__label {
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 15px 0 5px 0;
+}
+
+.btn__active__cont {
+  display: block;
+  margin: 20px auto;
+  width: 330px;
+}
+.btn__active__cont .complete-img {
+  display: block;
+  margin: 0 auto;
+}
+.btn__active__cont h2 {
+  text-transform: uppercase;
 }
 
 .attribution {

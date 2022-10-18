@@ -116,14 +116,6 @@ body {
     .date__cvc__text__cont, .exp__date__cvc__cont {
       display: flex;
   
-      form label, .date__label, .cvc__label {
-        text-transform: uppercase;
-        color: $very_dark_violet;
-        font-size: 0.8rem;
-        letter-spacing: 0.1rem;
-        padding: 15px 0 5px 0;
-      }
-  
       .cvc__label {
         margin-left: 20px;
       }
@@ -153,6 +145,7 @@ body {
       visibility: hidden;
     }
   }
+
   form input {
     border: 2px solid $light_grayish_violet;
     width: 330px;
@@ -177,7 +170,31 @@ body {
     color: $dark_grayish_violet;
     opacity: 0.5;
   }
+
+  form label, .date__label, .cvc__label {
+    text-transform: uppercase;
+    color: $very_dark_violet;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    padding: 15px 0 5px 0;
+  }
 }
+
+.btn__active__cont {
+  display: block;
+  margin: 20px auto;
+  width: 330px;
+
+  .complete-img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
 
 
 .attribution { 

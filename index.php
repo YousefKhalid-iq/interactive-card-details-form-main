@@ -53,6 +53,7 @@
   </div>
   <!-- Completed state start -->
   <div class="btn__active__cont">
+    <img src="images/icon-complete.svg" class="complete-img" alt="" role="presentation">
     <h2>Thank you!</h2>
     <p>We've added your card details</p>
     <button>Continue</button>
