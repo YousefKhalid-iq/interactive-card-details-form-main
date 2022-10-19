@@ -55,8 +55,8 @@
   <div class="btn__active__cont">
     <img src="images/icon-complete.svg" class="complete-img" alt="" role="presentation">
     <h2>Thank you!</h2>
-    <p>We've added your card details</p>
-    <button>Continue</button>
+    <p class="btn__active__p">We've added your card details</p>
+    <button class="btn__active">Continue</button>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
