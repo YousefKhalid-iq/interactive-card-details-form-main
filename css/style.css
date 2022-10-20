@@ -11,6 +11,7 @@ body {
 }
 
 .display__cont {
+  background-image: url("/images/bg-main-mobile.png");
   background-repeat: no-repeat;
   z-index: -1;
   background-size: 100%;
@@ -82,10 +83,6 @@ body {
   flex-direction: column;
   width: 330px;
 }
-.form__cont form form input:focus {
-  outline: hsl(278deg, 68%, 11%);
-  border: 2px solid hsl(278deg, 68%, 11%);
-}
 .form__cont form .date__cvc__text__cont, .form__cont form .exp__date__cvc__cont {
   display: flex;
 }
@@ -120,6 +117,14 @@ body {
   border-radius: 0.3rem;
   font-size: 1.1rem;
   color: hsl(278deg, 68%, 11%);
+}
+.form__cont form input:focus {
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  -o-border-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) 20;
+     border-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) 20;
+  border-radius: 0.3rem;
 }
 .form__cont input::-moz-placeholder {
   color: hsl(279deg, 6%, 55%);
