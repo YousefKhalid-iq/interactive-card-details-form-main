@@ -166,6 +166,7 @@ button {
   margin: 20px auto;
   width: 330px;
   text-align: center;
+  display: none;
 }
 .btn__active__cont .complete-img {
   display: block;
@@ -195,6 +196,7 @@ button {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding-top: 10px;
 }
 
 .attribution a {
