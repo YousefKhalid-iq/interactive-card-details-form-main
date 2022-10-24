@@ -62,7 +62,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Yousef Khalid</a>.
   </div>
-  <script src="js/main.js">
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
