@@ -131,7 +131,9 @@ button {
         width: 170px;
       }
     }
-    .confirm__btn {
+
+    .confirm__input {
+      cursor: pointer;
       padding: 12px 0;
       background-color: $very_dark_violet;
       color: $light_grayish_violet;
@@ -139,13 +141,9 @@ button {
       border: 0;
       border-radius: 0.3rem;
     }
-  
-    .btn__active__cont {
-      visibility: hidden;
-    }
   }
 
-  form input {
+  .form__input  {
     border: 2px solid $light_grayish_violet;
     width: 330px;
     padding: 10px 14px;
@@ -154,11 +152,12 @@ button {
     color: $very_dark_violet;
   } 
 
-  form input:focus {
+  .form__input:focus {
     outline: none;
     border-width: 2px;
     border-style: solid;
     border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 20;
+    outline: none;
     border-radius: 0.3rem;
   }
 
@@ -188,8 +187,7 @@ button {
 }
 
 .btn__active__cont {
-  display: block;
-  margin: 20px auto;
+  margin: 60px auto 20px auto;
   width: 330px;
   text-align: center;
   display: none;
@@ -218,7 +216,7 @@ button {
     font-size: 1rem;
     border: 0;
     border-radius: 0.3rem;
-    padding: 15px;
+    padding: 12px;
     margin-top: 35px;
   }
 }

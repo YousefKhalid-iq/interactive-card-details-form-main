@@ -84,3 +84,31 @@ let form = document.querySelector('.main__form');
 form.addEventListener('submit', e => {
   e.preventDefault();
 });
+
+// Success for submitting Cont
+
+const success = document.querySelector(".btn__active__cont");
+const btn = document.querySelector(".confirm__input");
+const formCont = document.querySelector(".form__cont");
+const btnSuccess = document.querySelector(".btn__active");
+
+let btnClicked = btn.onclick = function() {
+  if (btnClicked = true) {
+    formCont.style.display="none";
+    success.style.display="block";
+  } else {
+    formCont.style.display="block";
+    success.style.display="none";
+  }
+}
+
+btnClicked = btnSuccess.onclick = function() {
+  if (btnClicked = true) {
+    formCont.style.display="block";
+    success.style.display="none";
+  } else {
+    formCont.style.display="none";
+    success.style.display="block";
+  }
+}
+// End of success for submitting Cont

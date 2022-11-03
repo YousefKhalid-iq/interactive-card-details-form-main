@@ -103,7 +103,8 @@ button {
 .form__cont form .exp__date__cvc__cont #cvc__input {
   width: 170px;
 }
-.form__cont form .confirm__btn {
+.form__cont form .confirm__input {
+  cursor: pointer;
   padding: 12px 0;
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(270deg, 3%, 87%);
@@ -111,10 +112,7 @@ button {
   border: 0;
   border-radius: 0.3rem;
 }
-.form__cont form .btn__active__cont {
-  visibility: hidden;
-}
-.form__cont form input {
+.form__cont .form__input {
   border: 2px solid hsl(270deg, 3%, 87%);
   width: 330px;
   padding: 10px 14px;
@@ -122,12 +120,13 @@ button {
   font-size: 1.1rem;
   color: hsl(278deg, 68%, 11%);
 }
-.form__cont form input:focus {
+.form__cont .form__input:focus {
   outline: none;
   border-width: 2px;
   border-style: solid;
   -o-border-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) 20;
      border-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) 20;
+  outline: none;
   border-radius: 0.3rem;
 }
 .form__cont input::-moz-placeholder {
@@ -162,8 +161,7 @@ button {
 }
 
 .btn__active__cont {
-  display: block;
-  margin: 20px auto;
+  margin: 60px auto 20px auto;
   width: 330px;
   text-align: center;
   display: none;
@@ -189,7 +187,7 @@ button {
   font-size: 1rem;
   border: 0;
   border-radius: 0.3rem;
-  padding: 15px;
+  padding: 12px;
   margin-top: 35px;
 }
 
