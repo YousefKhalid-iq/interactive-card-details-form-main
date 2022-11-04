@@ -221,6 +221,107 @@ button {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .main__cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("/images/bg-main-desktop.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    z-index: -2;
+
+    .display__cont {
+      z-index: 0;
+      width: 450px;
+      background-image: none;
+      height: 90vh;
+      .display__cont__nobg {
+        .backcard__img__cont,.frontcard__img__cont {
+
+          .backcard__img {
+            left: 220px;
+            top: 450px;
+          }
+
+          .frontcard__img {
+            top: 210px;
+            left: 160px;
+          }
+
+          .backcard__img, .frontcard__img {
+            width: 380px;
+          }
+
+          .main__cvc {
+            top: 545px;
+            right: -275px;
+            font-size: 0.8rem;
+          }
+
+          .circles__img {
+            margin-top: 240px;
+            margin-left: 190px;
+          }
+
+          .frontcard__content {
+            margin-top: 50px;
+            margin-left: 190px;
+          }
+
+          .date__name__output__cont {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  //     .main__cvc {
+  //       position: absolute;
+  //       top: 103px;
+  //       right: -45px;
+  //       color: $white;
+  //       font-size: 0.7rem;
+  //       letter-spacing: 0.1rem;
+  //     }
+
+  //     .circles__img {
+  //       margin-top: 140px;
+  //       width: 22%;
+  //       margin-left: 35px;
+  //     }
+
+  //     .frontcard__content {
+  //       margin-top: 30px;
+  //       margin-left: 35px;
+  //       width: 100%;
+
+  //       .date__name__output__cont {
+  //         display: flex;
+  //         margin-top: 10px;
+  //       }
+
+  //       .main__number {
+  //         font-size: 1.15rem;
+  //         color: $white;
+  //         width: 100%;
+  //         letter-spacing: 0.1rem;
+  //       }
+
+  //       .main__name {
+  //         width: 205px;
+  //       }
+
+  //       .main__name, .main__date__firsthalf, .main__date__slash, .main__date__secondhalf {
+  //         font-size: 0.7rem;
+  //         color: $white;
+  //         text-transform: uppercase;
+  //       }
+  //     }
+  //   }
+  // } 
+}
+
 .attribution { 
   font-size: 11px; text-align: center; 
   padding-top: 10px;

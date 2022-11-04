@@ -191,6 +191,50 @@ button {
   margin-top: 35px;
 }
 
+@media only screen and (min-width: 1024px) {
+  .main__cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("/images/bg-main-desktop.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+  .main__cont .display__cont {
+    z-index: 0;
+    width: 450px;
+    background-image: none;
+    height: 90vh;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img {
+    left: 220px;
+    top: 450px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
+    top: 210px;
+    left: 160px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
+    width: 380px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .main__cvc, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .main__cvc {
+    top: 545px;
+    right: -275px;
+    font-size: 0.8rem;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .circles__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .circles__img {
+    margin-top: 240px;
+    margin-left: 190px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content {
+    margin-top: 50px;
+    margin-left: 190px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .date__name__output__cont, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .date__name__output__cont {
+    margin-top: 20px;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
