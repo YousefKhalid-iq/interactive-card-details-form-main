@@ -111,6 +111,10 @@ button {
   font-size: 1rem;
   border: 0;
   border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+.form__cont form .confirm__input:hover {
+  background-color: hsl(278deg, 67%, 23%);
 }
 .form__cont .form__input {
   border: 2px solid hsl(270deg, 3%, 87%);
@@ -189,58 +193,135 @@ button {
   border-radius: 0.3rem;
   padding: 12px;
   margin-top: 35px;
+  transition: all 0.3s ease-in-out;
+}
+.btn__active__cont .btn__active:hover {
+  background-color: hsl(278deg, 67%, 23%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  color: rgb(73, 73, 73);
+}
+
+.attribution a {
+  color: hsl(278deg, 68%, 11%);
 }
 
 @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
   .main__cont {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-image: url("/images/bg-main-desktop.png");
-    background-size: 50%;
+    background-size: 400px 100%;
     background-repeat: no-repeat;
-    z-index: -2;
   }
   .main__cont .display__cont {
     z-index: 0;
     width: 450px;
     background-image: none;
-    height: 90vh;
+    height: 100vh;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img {
-    left: 220px;
+    left: 160px;
     top: 450px;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
     top: 210px;
-    left: 160px;
+    left: 90px;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
     width: 380px;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .main__cvc, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .main__cvc {
     top: 545px;
-    right: -275px;
+    right: -205px;
     font-size: 0.8rem;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .circles__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .circles__img {
     margin-top: 240px;
-    margin-left: 190px;
+    margin-left: 110px;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content {
     margin-top: 50px;
-    margin-left: 190px;
+    margin-left: 110px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .main__number, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .main__number {
+    font-size: 1.4rem;
   }
   .main__cont .display__cont .display__cont__nobg .backcard__img__cont .date__name__output__cont, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .date__name__output__cont {
     margin-top: 20px;
+    margin-right: -55px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .date__name__output__cont p, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .date__name__output__cont p {
+    font-size: 0.9rem;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .main__name, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .main__name {
+    width: 240px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .main__date__firsthalf, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .main__date__firsthalf {
+    margin-left: 55px;
+  }
+  .main__cont .main__form {
+    margin: 0 300px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+  }
+  .btn__active__cont {
+    margin: 0 300px;
+    width: 330px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+  }
+  .attribution {
+    right: 20px;
+    left: 300px;
   }
 }
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
+@media only screen and (min-width: 1440px) {
+  .main__cont {
+    background-size: 600px 100%;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .backcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .backcard__img {
+    left: 360px;
+    top: 450px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__img {
+    top: 210px;
+    left: 290px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .main__cvc, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .main__cvc {
+    top: 545px;
+    right: -405px;
+    font-size: 0.8rem;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .circles__img, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .circles__img {
+    margin-top: 240px;
+    margin-left: 310px;
+  }
+  .main__cont .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content, .main__cont .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content {
+    margin-top: 50px;
+    margin-left: 310px;
+  }
+  .main__cont .main__form {
+    margin: 0 200px;
+    position: absolute;
+    left: 45%;
+  }
+  .btn__active__cont {
+    margin: 0 200px;
+    left: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */
