@@ -61,11 +61,14 @@ document.getElementById('num__input').addEventListener('input', function (e) {
 // End of making a space after every 4 numbers in the ""card number input""
 
 // Making the ""name input"" only accept letters 
+// document.getElementById("name__input").addEventListener('input', function(e) {
 
-function alphaOnly(event) {
-  let key = event.keyCode;
-  return ((key >= 65 && key <= 90) || key == 8);
-};
+// })
+
+// function alphaOnly(event) {
+//   let key = event.onclick;
+//   return ((key >= 65 && key <= 90) || key == 8);
+// };
 
 // end of making the ""name input"" only accept letters 
 
@@ -112,3 +115,11 @@ btnClicked = btnSuccess.onclick = function() {
   }
 }
 // End of success for submitting Cont
+
+// Form error event on submit
+
+function checkInputs() {
+  
+}
+
+// End of form error event on submit

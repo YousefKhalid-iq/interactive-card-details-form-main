@@ -35,17 +35,17 @@
     <div class="form__cont">
       <form class="main__form" method="POST" action="/login_info.php">
         <label for="name__input">Cardholder Name</label>
-        <input type="text" maxlength="25" class="form__input" id="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)" onkeydown="return /[a-z]/i.test(event.key)" onpaste="return false;" ondrop="return false;" required>
+        <input type="text" maxlength="25" class="form__input" id="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)" onpaste="return false;" ondrop="return false;" onkeydown="return /[a-z]/i.test(event.key)">
         <label for="num__input">Card Number</label>
-        <input type="text" maxlength="19" class="form__input" id="num__input" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)" name="num__input" required>
+        <input type="text" maxlength="19" class="form__input" id="num__input" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)" name="num__input">
         <div class="date__cvc__text__cont">
           <p class="date__label">Exp. Date (MM/YY)</p>
           <p class="cvc__label">CVC</p>
         </div>
         <div class="exp__date__cvc__cont">
-          <input type="text"id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2" required>
-          <input type="text" id="year__input" class="exp__date__cvc__input form__input" placeholder="YY" onkeyup="mainDateFunc2(this)" maxlength="2" required>
-          <input type="text" id="cvc__input" class="exp__date__cvc__input form__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)" maxlength="3" required>  
+          <input type="text"id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2">
+          <input type="text" id="year__input" class="exp__date__cvc__input form__input" placeholder="YY" onkeyup="mainDateFunc2(this)" maxlength="2">
+          <input type="text" id="cvc__input" class="exp__date__cvc__input form__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)" maxlength="3">  
         </div>
         <input type="submit" value="Continue" class="confirm__input">
       </form>
