@@ -67,7 +67,7 @@ button {
   margin-top: 10px;
 }
 .display__cont .display__cont__nobg .backcard__img__cont .frontcard__content .main__number, .display__cont .display__cont__nobg .frontcard__img__cont .frontcard__content .main__number {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: hsl(0deg, 0%, 100%);
   width: 100%;
   letter-spacing: 0.1rem;

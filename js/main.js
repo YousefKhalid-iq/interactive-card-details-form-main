@@ -54,23 +54,25 @@ function mainCvcFunc(element) {
 
 // Making a space after every 4 numbers in the ""card number input""
 
-document.getElementById('num__input').addEventListener('input', function (e) {
-  e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+let numberInput = document.getElementById('num__input');
+let cardNumber = document.querySelector(".main__number")
+
+numberInput.addEventListener("keyup", () => {
+  cardNumber.innerHTML = numberInput.value;
+  if (numberInput.value.length > 0) {
+    if (
+      numberInput.value.length === 4 ||
+      numberInput.value.length === 9 ||
+      numberInput.value.length === 14
+    ) {
+      numberInput.value += " ";
+    }
+  } else {
+    cardNumber.innerHTML = "0000 0000 0000 0000";
+  }
 });
 
 // End of making a space after every 4 numbers in the ""card number input""
-
-// Making the ""name input"" only accept letters 
-// document.getElementById("name__input").addEventListener('input', function(e) {
-
-// })
-
-// function alphaOnly(event) {
-//   let key = event.onclick;
-//   return ((key >= 65 && key <= 90) || key == 8);
-// };
-
-// end of making the ""name input"" only accept letters 
 
 // Making month, year and cvc number only inputs 
 
@@ -86,6 +88,7 @@ let form = document.querySelector('.main__form');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  checkInputs();
 });
 
 // Success for submitting Cont
@@ -118,8 +121,27 @@ btnClicked = btnSuccess.onclick = function() {
 
 // Form error event on submit
 
+  let formName = document.getElementById('name__input');
+  let cardNum = document.getElementById('num__input');
+  let month = document.getElementById('month__input');
+  let year = document.getElementById('year__input');
+  let cvc = document.getElementById('cvc__input');
+
 function checkInputs() {
-  
+  const nameValue = formName.value.trim();
+  const cardNumValue = cardNum.value.trim();
+  const monthValue = month.value.trim();
+  const yearValue = year.value.trim();
+  const cvcValue = cvc.value.trim();
+
+  if (nameValue === '') {
+    setErrorFor(formName, 'Name can\'t be blank')
+  }
 }
+
+// function setErrorFor(input, message) {
+//   const formControl = input;
+//   const s
+// }
 
 // End of form error event on submit
