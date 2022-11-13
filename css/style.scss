@@ -157,6 +157,29 @@ button {
     color: $very_dark_violet;
   } 
 
+  .small {
+    color: $red_input_errors;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.7rem;
+  }
+
+  .form__control.error .small {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .form__control.success input:focus {
+    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 20;
+  }
+
+  .form__control.error input {
+    border-image: none;
+    border-color: hsl(0, 100%, 66%);
+  }
+
   .form__input:focus {
     outline: none;
     border-width: 2px;
@@ -233,10 +256,6 @@ button {
 
 .attribution { 
   font-size: 11px; text-align: center; 
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  left: 0;
   color: rgb(73, 73, 73);
 }
 
@@ -337,6 +356,8 @@ button {
   }
 
   .attribution {
+    position: absolute;
+    bottom: 10px;
     right: 20px;
     left: 300px;
   }

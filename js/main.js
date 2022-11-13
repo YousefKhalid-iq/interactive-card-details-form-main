@@ -90,33 +90,32 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   checkInputs();
 });
-
 // Success for submitting Cont
 
 const success = document.querySelector(".btn__active__cont");
 const btn = document.querySelector(".confirm__input");
 const formCont = document.querySelector(".form__cont");
 const btnSuccess = document.querySelector(".btn__active");
-
-let btnClicked = btn.onclick = function() {
-  if (btnClicked = true) {
-    formCont.style.display="none";
-    success.style.display="block";
-  } else {
-    formCont.style.display="block";
-    success.style.display="none";
+  let btnClicked = btn.onclick = function() {
+    if (btnClicked = true) {
+      formCont.style.display="none";
+      success.style.display="block";
+    } else {
+      formCont.style.display="block";
+      success.style.display="none";
+    }
   }
-}
-
-btnClicked = btnSuccess.onclick = function() {
-  if (btnClicked = true) {
-    formCont.style.display="block";
-    success.style.display="none";
-  } else {
-    formCont.style.display="none";
-    success.style.display="block";
+  
+  btnClicked = btnSuccess.onclick = function() {
+    if (btnClicked = true) {
+      formCont.style.display="block";
+      success.style.display="none";
+    } else {
+      formCont.style.display="none";
+      success.style.display="block";
+    }
   }
-}
+
 // End of success for submitting Cont
 
 // Form error event on submit
@@ -136,12 +135,49 @@ function checkInputs() {
 
   if (nameValue === '') {
     setErrorFor(formName, 'Name can\'t be blank')
+  } else {
+    setSuccessFor(formName);
+  }
+
+  if (cardNumValue === '') {
+    setErrorFor(cardNum, 'Card Number can\'t be blank');
+  } else if (cardNum.value.match(/[^0-9\s]/)) {
+    setErrorFor(cardNum, 'Wrong format, numbers only');
+  } else {
+    setSuccessFor(cardNum);
+  }
+
+  if (monthValue === '') {
+    setErrorFor(month, 'Can\'t be blank');
+  } else if (yearValue === '') {
+    setErrorFor(month, 'Can\'t be blank');
+  } else {
+    setSuccessFor(month);
+  }
+  
+  if (yearValue === '') {
+    setErrorFor(year, '');
+  } else {
+    setSuccessFor(year);
+  }
+
+  if (cvcValue === '') {
+    setErrorFor(cvc, 'Can\'t be blank')
+  } else {
+    setSuccessFor(cvc);
   }
 }
 
-// function setErrorFor(input, message) {
-//   const formControl = input;
-//   const s
-// }
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('.small');
+  small.innerText = message;
+  formControl.className = 'form__control error';
+}
+
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form__control success';
+}
 
 // End of form error event on submit

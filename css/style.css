@@ -124,6 +124,27 @@ button {
   font-size: 1.1rem;
   color: hsl(278deg, 68%, 11%);
 }
+.form__cont .small {
+  color: hsl(0deg, 100%, 66%);
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.7rem;
+}
+.form__cont .form__control.error .small {
+  visibility: visible;
+  opacity: 1;
+}
+.form__cont .form__control.success input:focus {
+  -o-border-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) 20;
+     border-image: linear-gradient(hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) 20;
+}
+.form__cont .form__control.error input {
+  -o-border-image: none;
+     border-image: none;
+  border-color: hsl(0deg, 100%, 66%);
+}
 .form__cont .form__input:focus {
   outline: none;
   border-width: 2px;
@@ -202,10 +223,6 @@ button {
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  left: 0;
   color: rgb(73, 73, 73);
 }
 
@@ -286,6 +303,8 @@ button {
     left: 35%;
   }
   .attribution {
+    position: absolute;
+    bottom: 10px;
     right: 20px;
     left: 300px;
   }
