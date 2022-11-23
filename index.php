@@ -34,12 +34,12 @@
     </div>
     <div class="form__cont">
       <form class="main__form" method="POST" action="">
-        <div class="form__control">
+        <div class="form__control" id="name__cont">
           <label for="name__input">Cardholder Name</label>
           <input type="text" maxlength="25" class="form__input" id="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)" onpaste="return false;" ondrop="return false;">
           <small class="small">Error message</small>
         </div>
-        <div class="form__control">
+        <div class="form__control" id="num__cont">
           <label for="num__input">Card Number</label>
           <input type="text" maxlength="19" class="form__input" id="num__input" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)" name="num__input">
           <small class="small">Error message</small>
@@ -49,15 +49,15 @@
           <p class="cvc__label">CVC</p>
         </div>
         <div class="exp__date__cvc__cont">
-          <div class="form__control">
+          <div class="form__control" id="month__cont">
             <input type="text"id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2">
             <small class="small">Error message</small>
           </div>
-          <div class="form__control">
+          <div class="form__control" id="year__cont">
             <input type="text" id="year__input" class="exp__date__cvc__input form__input" placeholder="YY" onkeyup="mainDateFunc2(this)" maxlength="2"> 
             <small class="small">Error message</small> 
           </div>
-          <div class="form__control">
+          <div class="form__control" id="cvc__cont">
             <input type="text" id="cvc__input" class="exp__date__cvc__input form__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)" maxlength="3">
             <small class="small">Error message</small>  
           </div>
