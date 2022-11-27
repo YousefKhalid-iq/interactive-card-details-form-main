@@ -77,79 +77,33 @@ numberInput.addEventListener("keyup", () => {
 // Success for submitting Cont
 
 let form = document.querySelector('.main__form');
-let chName = document.getElementById('name__input') ;
-let cNum = document.getElementById('num__input');
-let cMonth = document.getElementById('month__input');
-let cYear = document.getElementById('year__input');
-let cCvc = document.getElementById('cvc__input');
-let formContent = chName + cNum + cMonth + cYear + cCvc;
+let chName = document.getElementById('name__input').value == 0 ? true : false;
+let cNum = document.getElementById('num__input').value == 0 ? true : false;
+let cardDate = document.getElementById('month__input').value == 0 ? true : false;
+let cardYear = document.getElementById('year__input').value == 0 ? true : false;
+let cardCVC = document.getElementById('cvc__input').value == 0 ? true : false;
 
+// combined whole form into one (output is 5 if all is empty) // (output is 0 if all is filled)
+const formValue = chName + cNum + cardDate + cardYear + cardCVC;
+// default output is 5 if true and will substract -1 if false
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    checkInputs();
-  });
+// grabbing form container & thank you section container
+const formCont = document.getElementById('form__cont');
+const successCont = document.getElementById('btn__active__cont');
+let confirtmBtn = document.querySelector('.confirm__input');
 
+if (formValue == 0) {
+  formCont.style.display="none";
+  console.log("success");
+} else {
+  console.log("fail");
+  formCont.style.display="block";
+}
 
-  // if (formContent.value == null) {
-  //   alert(':)')
-  // } else {
-  //   alert(':(')
-  // }
-
-  const success = document.querySelector(".btn__active__cont");
-  const btn = document.querySelector(".confirm__input");
-  const formCont = document.querySelector(".form__cont");
-  const btnSuccess = document.querySelector(".btn__active");
-  
-    btnSuccess.addEventListener('click', () => {
-      if (formContent.value.length == 0) {
-        formCont.style.display="block";
-        success.style.display="none";
-      } else if (formContent.value.length !== 0) {
-        formCont.style.display="none";
-        success.style.display="block";
-      }
-    })
-
-    btn.addEventListener('click', () => {
-      
-    })
-
-  //  else  {
-  //   console.log('cap:)')
-  //   btn.onclick = function() {
-  //     if (btnClicked = true) {
-  //       formCont.style.display="none";
-  //       success.style.display="block";
-  //     } else {
-  //       formCont.style.display="block";
-  //       success.style.display="none";
-  //     }
-  //    }
-  // }
-  
-  // if (formContent.length === 0) {
-  //   btnClicked = btnSuccess.onclick = function() {
-  //     if (btnClicked = true) {
-  //       formCont.style.display="block";
-  //       success.style.display="none";
-  //     } else {
-  //       formCont.style.display="none";
-  //       success.style.display="block";
-  //     }
-  //   }
-  // } else {
-    // btn.onclick = function() {
-    //   if (btnClicked = true) {
-    //     formCont.style.display="none";
-    //     success.style.display="block";
-    //   } else {
-    //     formCont.style.display="block";
-    //     success.style.display="none";
-    //   }
-    //  }
-  // }
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  checkInputs();
+});
 
 // End of success for submitting Cont
 

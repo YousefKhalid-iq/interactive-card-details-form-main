@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="form__cont">
+    <div id="form__cont" class="form__cont">
       <form class="main__form" method="POST" action="">
         <div class="form__control" id="name__cont">
           <label for="name__input">Cardholder Name</label>
@@ -50,7 +50,7 @@
         </div>
         <div class="exp__date__cvc__cont">
           <div class="form__control" id="month__cont">
-            <input type="text"id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2">
+            <input type="text" id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2">
             <small class="small">Error message</small>
           </div>
           <div class="form__control" id="year__cont">
@@ -71,7 +71,7 @@
     </div>
   </div>
   <!-- Completed state start -->
-  <div class="btn__active__cont">
+  <div id="btn__active__cont" class="btn__active__cont">
     <img src="images/icon-complete.svg" class="complete-img" alt="" role="presentation">
     <h2>Thank you!</h2>
     <p class="btn__active__p">We've added your card details</p>
