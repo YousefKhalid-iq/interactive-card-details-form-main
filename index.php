@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="main__cont">
+    <div class="display__cont">
+      <div class="display__cont__nobg">
+        <div class="backcard__img__cont">
+          <img src="images/bg-card-back.png" class="backcard__img" alt="an image of the backside of a credit card">
+          <p class="main__cvc">000</p>
+        </div>
+        <div class="frontcard__img__cont">
+          <img src="images/bg-card-front.png" class="frontcard__img" alt="an image of the frontside of a credit card">
+          <div class="circles__img__cont">
+            <img src="images/card-logo.svg" class="circles__img" alt="" role="presentation">
+          </div>
+          <div class="frontcard__content">
+            <p class="main__number">0000 0000 0000 0000</p>
+            <div class="date__name__output__cont">
+              <p class="main__name" >Jane Appleseed</p>
+              <p class="main__date__firsthalf">00</p>
+              <p class="main__date__slash">/</p>
+              <p class="main__date__secondhalf">00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form__cont" class="form__cont">
+      <form class="main__form" action="user_info.php" method="POST">
+        <div class="form__control" id="name__cont">
+          <label for="name__input">Cardholder Name</label>
+          <input type="text" maxlength="25" class="form__input" id="name__input" placeholder="e.g. Jane Appleseed" name="cardholder__name" onkeyup="mainNameFunc(this)" onpaste="return false;" ondrop="return false;">
+          <small class="small">Error message</small>
+        </div>
+        <div class="form__control" id="num__cont">
+          <label for="num__input">Card Number</label>
+          <input type="text" maxlength="19" class="form__input" id="num__input" placeholder="e.g. 1234 5678 9123 0000" name="card__num" onkeyup="mainNumFunc(this)" name="num__input">
+          <small class="small">Error message</small>
+        </div>
+        <div class="date__cvc__text__cont">
+          <p class="date__label">Exp. Date (MM/YY)</p>
+          <p class="cvc__label">CVC</p>
+        </div>
+        <div class="exp__date__cvc__cont">
+          <div class="form__control" id="month__cont">
+            <input type="text" id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" name="month" onkeyup="mainDateFunc1(this)" maxlength="2">
+            <small class="small">Error message</small>
+          </div>
+          <div class="form__control" id="year__cont">
+            <input type="text" id="year__input" class="exp__date__cvc__input form__input" placeholder="YY" name="year" onkeyup="mainDateFunc2(this)" maxlength="2"> 
+            <small class="small">Error message</small> 
+          </div>
+          <div class="form__control" id="cvc__cont">
+            <input type="text" id="cvc__input" class="exp__date__cvc__input form__input" placeholder="e.g. 123" name="cvc" onkeyup="mainCvcFunc(this)" maxlength="3">
+            <small class="small">Error message</small>  
+          </div>
+        </div>
+        <input type="submit" value="Continue" class="confirm__input">
+      </form>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/YousefKhalid-iq/interactive-card-details-form-main">Yousef Khalid</a>.
+    </div>
+  </div>
+  <!-- Completed state start -->
+  <div id="btn__active__cont" class="btn__active__cont">
+    <img src="images/icon-complete.svg" class="complete-img" alt="" role="presentation">
+    <h2>Thank you!</h2>
+    <p class="btn__active__p">We've added your card details</p>
+    <button class="btn__active">Continue</button>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
+<?php include 'config/user_info.php'; ?>

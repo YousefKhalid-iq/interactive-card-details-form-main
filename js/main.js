@@ -84,20 +84,31 @@ let cardYear = document.getElementById('year__input').value == 0 ? true : false;
 let cardCVC = document.getElementById('cvc__input').value == 0 ? true : false;
 
 // combined whole form into one (output is 5 if all is empty) // (output is 0 if all is filled)
-const formValue = chName + cNum + cardDate + cardYear + cardCVC;
+let formValue = chName + cNum + cardDate + cardYear + cardCVC;
 // default output is 5 if true and will substract -1 if false
 
 // grabbing form container & thank you section container
 const formCont = document.getElementById('form__cont');
 const successCont = document.getElementById('btn__active__cont');
 let confirtmBtn = document.querySelector('.confirm__input');
+let successBtn = document.querySelector('.btn__active');
 
-if (formValue == 0) {
-  formCont.style.display="none";
-  console.log("success");
-} else {
-  console.log("fail");
-  formCont.style.display="block";
+
+confirtmBtn.onclick = function() {
+  if (formValue == 0) {
+    formCont.style.display="none";
+    successCont.style.display="block";
+    console.log("empty");
+  } else { 
+    formCont.style.display="block";
+    successCont.style.display="none";
+    console.log("full");
+  }
+}
+
+successBtn.onclick = function() {
+  successCont.style.display="none";
+  formCont.style.display="block"; 
 }
 
 form.addEventListener('submit', e => {
