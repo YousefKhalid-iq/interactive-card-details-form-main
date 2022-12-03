@@ -56,7 +56,7 @@ function mainCvcFunc(element) {
 
 let numberInput = document.getElementById('num__input');
 let cardNumber = document.querySelector(".main__number")
-
+// 
 numberInput.addEventListener("keyup", () => {
   cardNumber.innerHTML = numberInput.value;
   if (numberInput.value.length > 0) {

@@ -230,6 +230,7 @@ button {
   color: hsl(278deg, 68%, 11%);
 }
 
+/* Desktop styling */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;

@@ -33,15 +33,15 @@
       </div>
     </div>
     <div id="form__cont" class="form__cont">
-      <form class="main__form" action="user_info.php" method="POST">
+      <form class="main__form" method="">
         <div class="form__control" id="name__cont">
           <label for="name__input">Cardholder Name</label>
-          <input type="text" maxlength="25" class="form__input" id="name__input" placeholder="e.g. Jane Appleseed" name="cardholder__name" onkeyup="mainNameFunc(this)" onpaste="return false;" ondrop="return false;">
+          <input type="text" maxlength="25" class="form__input" id="name__input" placeholder="e.g. Jane Appleseed" onkeyup="mainNameFunc(this)" onpaste="return false;" ondrop="return false;">
           <small class="small">Error message</small>
         </div>
         <div class="form__control" id="num__cont">
           <label for="num__input">Card Number</label>
-          <input type="text" maxlength="19" class="form__input" id="num__input" placeholder="e.g. 1234 5678 9123 0000" name="card__num" onkeyup="mainNumFunc(this)" name="num__input">
+          <input type="text" maxlength="19" class="form__input" id="num__input" placeholder="e.g. 1234 5678 9123 0000" onkeyup="mainNumFunc(this)">
           <small class="small">Error message</small>
         </div>
         <div class="date__cvc__text__cont">
@@ -50,15 +50,15 @@
         </div>
         <div class="exp__date__cvc__cont">
           <div class="form__control" id="month__cont">
-            <input type="text" id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" name="month" onkeyup="mainDateFunc1(this)" maxlength="2">
+            <input type="text" id="month__input" class="exp__date__cvc__input form__input" placeholder="MM" onkeyup="mainDateFunc1(this)" maxlength="2">
             <small class="small">Error message</small>
           </div>
           <div class="form__control" id="year__cont">
-            <input type="text" id="year__input" class="exp__date__cvc__input form__input" placeholder="YY" name="year" onkeyup="mainDateFunc2(this)" maxlength="2"> 
+            <input type="text" id="year__input" class="exp__date__cvc__input form__input" placeholder="YY" onkeyup="mainDateFunc2(this)" maxlength="2"> 
             <small class="small">Error message</small> 
           </div>
           <div class="form__control" id="cvc__cont">
-            <input type="text" id="cvc__input" class="exp__date__cvc__input form__input" placeholder="e.g. 123" name="cvc" onkeyup="mainCvcFunc(this)" maxlength="3">
+            <input type="text" id="cvc__input" class="exp__date__cvc__input form__input" placeholder="e.g. 123" onkeyup="mainCvcFunc(this)" maxlength="3">
             <small class="small">Error message</small>  
           </div>
         </div>
@@ -77,7 +77,8 @@
     <p class="btn__active__p">We've added your card details</p>
     <button class="btn__active">Continue</button>
   </div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js">
+    
+  </script>
 </body>
 </html>
-<?php include 'config/user_info.php'; ?>
