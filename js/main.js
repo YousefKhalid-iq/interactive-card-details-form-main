@@ -98,11 +98,11 @@ confirtmBtn.onclick = function() {
   if (formValue == 0) {
     formCont.style.display="none";
     successCont.style.display="block";
-    console.log("empty");
+    //console.log("empty");
   } else { 
     formCont.style.display="block";
     successCont.style.display="none";
-    console.log("full");
+    //console.log("full");
   }
 }
 
