@@ -101,7 +101,6 @@ confirtmBtn.onclick = function() {
     //console.log("empty");
   } else { 
     formCont.style.display="block";
-    successCont.style.display="none";
     //console.log("full");
   }
 }
