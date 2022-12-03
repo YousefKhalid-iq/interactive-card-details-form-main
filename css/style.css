@@ -15,7 +15,7 @@ button {
 }
 
 .display__cont {
-  background-image: url("images/bg-main-mobile.png");
+  background-image: url("/images/bg-main-mobile.png");
   background-repeat: no-repeat;
   z-index: -1;
   background-size: 100%;
@@ -238,7 +238,7 @@ button {
   .main__cont {
     display: flex;
     align-items: center;
-    background-image: url("images/bg-main-desktop.png");
+    background-image: url("/images/bg-main-desktop.png");
     background-size: 400px 100%;
     background-repeat: no-repeat;
   }

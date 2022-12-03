@@ -56,22 +56,27 @@ function mainCvcFunc(element) {
 
 let numberInput = document.getElementById('num__input');
 let cardNumber = document.querySelector(".main__number")
-// 
-numberInput.addEventListener("keyup", () => {
-  cardNumber.innerHTML = numberInput.value;
-  if (numberInput.value.length > 0) {
-    if (
-      numberInput.value.length === 4 ||
-      numberInput.value.length === 9 ||
-      numberInput.value.length === 14
-    ) {
-      numberInput.value += " ";
-    }
-  } else {
+
+numberInput.addEventListener("input", function(e) {
+  let input = numberInput.value;
+  if (!input) {
     cardNumber.innerHTML = "0000 0000 0000 0000";
+  } else {
+    let field = e.target;
+    let position = field.selectionEnd;
+    let length = field.value.length;
+
+    field.value = field.value.replace(/[^\da-zA-Z&é"'(§è!çà)-]/g, "")
+    .replace(/(.{4})/g, "$1 ").trim();
+
+    cardNumber.innerHTML = field.value;
+
+    field.selectionEnd = position +=
+    field.value.charAt(position - 1) === " " &&
+    field.value.charAt(length - 1) === " " ? 1 : 0;
   }
 });
-
+    
 // End of making a space after every 4 numbers in the ""card number input""
 
 // Success for submitting Cont
